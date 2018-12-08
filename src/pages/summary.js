@@ -10,8 +10,7 @@ class SummaryPage extends React.Component {
   state = { summary: undefined }
 
   componentDidMount() {
-    getDonorsSummary('matthew.fitzpatrick.i4c@gmail.com').then(response => {
-      console.log('response', response)
+    getDonorsSummary().then(response => {
       this.setState({
         summary: response,
       })

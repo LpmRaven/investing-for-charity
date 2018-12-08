@@ -14,7 +14,6 @@ class LoginPage extends React.Component {
     e.preventDefault();
     window.localStorage.setItem('email', this.state.email);
     window.location.href = "/summary";
-    console.log('handle submit')
   }
 
   render() {
@@ -24,7 +23,7 @@ class LoginPage extends React.Component {
            <div className="formTitle">
         <h1>Login</h1>
         </div>
-        <form onSubmit={this.handleSubmit} class="loginForm">
+        <form onSubmit={this.handleSubmit} className="loginForm">
           <div>
           
           <label>Email:

@@ -1,7 +1,12 @@
 {
   "version": 2,
-  "name": "gatsby",
+  "name": "investing-for-charity",
   "builds": [
-      { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
+      { 
+        "src": "package.json", 
+        "use": "@now/static-build", 
+        "config": {"distDir": "public"},
+        "dotenv": ".env.development"
+      }
   ]
 }

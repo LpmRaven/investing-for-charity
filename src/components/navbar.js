@@ -8,12 +8,12 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <a className="navbar-brand" href="#">
           Navbar
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNavAltMarkup"
@@ -21,20 +21,20 @@ export default class Navbar extends React.Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon" />
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">
-              Home <span class="sr-only">(current)</span>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <a className="nav-item nav-link active" href="#">
+              Home <span className="sr-only">(current)</span>
             </a>
-            <a class="nav-item nav-link" href="#">
+            <a className="nav-item nav-link" href="#">
               Features
             </a>
-            <a class="nav-item nav-link" href="#">
+            <a className="nav-item nav-link" href="#">
               Pricing
             </a>
-            <a class="nav-item nav-link disabled" href="#">
+            <a className="nav-item nav-link disabled" href="#">
               Disabled
             </a>
             <button className="submitButton" onClick={this.onLogOut}>
