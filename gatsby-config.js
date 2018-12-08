@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/investing-for-charity",
   siteMetadata: {
     title: 'Gatsby Default Starter',
   },
