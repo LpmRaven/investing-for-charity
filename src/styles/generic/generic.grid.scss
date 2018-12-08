@@ -1,0 +1,49 @@
+.g-grid__container {
+    display: grid;
+    align-items: stretch;
+}
+
+.g-grid__container > div,
+.g-grid__item > div,
+.g-grid__container > section,
+.g-grid__item > section {
+    display: grid;
+}
+
+.g-grid__item--one {
+    grid-area: one;
+}
+
+.g-grid__item--two {
+    grid-area: two;
+}
+
+.g-grid__item--three {
+    grid-area: three;
+}
+
+.g-grid__item--four {
+    grid-area: four;
+}
+
+.g-grid__item--five {
+    grid-area: five;
+}
+
+.g-grid__item--six {
+    grid-area: six;
+}
+
+.g-grid__container--1\/2-1\/2 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "one" "two";
+    @media (min-width: $size-s2) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "one two";
+
+        // .g-grid__item--one {
+        //     margin-right: 2em;
+        // }
+    }
+}
