@@ -2,13 +2,22 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import withEmail from '../components/withEmail';
 
-const SummaryPage = () => (
-  <Layout>
-    <h1>Summary</h1>
-    <Link to="/charities/">Charities</Link>
-    <Link to="/allocation/">Allocation form</Link>
-  </Layout>
-);
+class SummaryPage extends React.Component {
+  componentDidMount() {
 
-export default SummaryPage;
+  }
+  
+  render() {
+    return (
+      <Layout>
+        <h1>Summary</h1>
+        <Link to="/charities/">Charities</Link>
+        <Link to="/allocation/">Allocation form</Link>
+      </Layout>
+    );
+  }
+}
+
+export default withEmail(SummaryPage);

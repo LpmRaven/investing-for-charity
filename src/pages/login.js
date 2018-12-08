@@ -12,6 +12,8 @@ class LoginPage extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    window.localStorage.setItem('email', this.state.email);
+    window.location.href = "/summary";
     console.log('handle submit')
   }
 
