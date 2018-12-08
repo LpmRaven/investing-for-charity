@@ -15,6 +15,7 @@ export default class Navbar extends React.Component {
     <a class="nav-item nav-link" href="#">Features</a>
     <a class="nav-item nav-link" href="#">Pricing</a>
     <a class="nav-item nav-link disabled" href="#">Disabled</a>
+    <button className="submitButton">Logout</button>
   </div>
 </div>
 </nav>
