@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
-import './layout.css'
+import '../styles/styles.scss'
+import './landing-page-layout.scss'
 
-const Layout = ({ children }) => (
+const LandingPageLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query LandingPageQuery {
         site {
           siteMetadata {
             title
@@ -19,24 +19,13 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
+        <div className="c-app">
+          <div className="g-inner-wrapper g-inner-wrapper--default">
+            <header className="g-flex__container c-header">
+              <div className="g-flex__item"><div className="c-header__logo">Investing for charity</div></div>
+              <div className="g-flex__item c-header__login-button"><div className="c-header__login-button">Login</div></div>
+            </header>
+          </div>
           {children}
         </div>
       </>
@@ -44,8 +33,8 @@ const Layout = ({ children }) => (
   />
 )
 
-Layout.propTypes = {
+LandingPageLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default LandingPageLayout;

@@ -1,0 +1,56 @@
+html {
+    font-size: 100%;
+    font-size: 16px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+      font-size: 16px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .g-inner-wrapper {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .g-inner-wrapper--default {
+    max-width: 1300px;
+  }
+
+  .g-inner-wrapper--thin {
+    max-width: $size-m;
+  }
+
+  .g-grid__item > .g-content-display-block,
+  .g-content-display-block {
+    display: block;
+  }
+
+  .g-content-padding {
+    padding: 1em;
+
+    @media (min-width: $size-s2) {
+      padding: 2em;
+    }
+  }
+
+  .g-content-margin-top {
+    margin-top: 1em;
+
+    @media (min-width: $size-s2) {
+      margin-top: 2em;
+    }
+  }
+
+  .g-position-relative {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
