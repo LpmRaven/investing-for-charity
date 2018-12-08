@@ -111,11 +111,11 @@ function listMajors() {
 
 const getDonorSummary = async () => {
   const response = await gapi.client.sheets.spreadsheets.values.get({
-    spreadsheetId: '<>',
-    range: '<>'
+    spreadsheetId: '10v33bjl0efHLyLVgklYcQhzOKE3l13CuE2dU4QI-32I',
+    range: 'All Donors Summary!B1:AH'
   });
 
-  const filterEmail = '<>';
+  const filterEmail = 'matthew.fitzpatrick.i4c@gmail.com';
   
   const values = response.result.values;
 

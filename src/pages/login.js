@@ -12,25 +12,38 @@ class LoginPage extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    window.localStorage.setItem('email', this.state.email);
+    window.location.href = "/summary";
     console.log('handle submit')
   }
 
   render() {
     return (
       <Layout>
+           <div className="outerFormContainer">
+           <div className="formTitle">
         <h1>Login</h1>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Email:
+        </div>
+        <form onSubmit={this.handleSubmit} class="loginForm">
+          <div>
+          
+          <label>Email:
             <input
+              className="formField"
               type="text"
               value={this.state.enauk}
               onChange={this.handleChange}
             />
           </label>
-          <input type="submit" value="Submit" />
+          </div>
+          <div>
+          <input type="submit" value="Submit" className="submitButton"/>
+          </div>
         </form>
-        <Link to="/summary/">To Summary</Link>
+        <div className="linkToSummary">
+        <Link to="/summary/" >To Summary</Link>
+        </div>
+        </div>
       </Layout>
     )
   }
