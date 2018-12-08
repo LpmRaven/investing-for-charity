@@ -1,7 +1,23 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from 'react'
 
-export default Comp => (props) => {
-  const email = window.localStorage.getItem('email');
-  return email ? <Comp {...props} /> : <Link to="/login" />
+export default Comp => {
+  return class WithEmail extends React.Component {
+    state = { email: undefined }
+
+    componentDidMount() {
+      const email = window.localStorage.getItem('email')
+      if (!email) {
+        window.location.href = '/login'
+        return
+      }
+
+      this.setState({
+        email,
+      })
+    }
+
+    render() {
+      return this.state.email ? <Comp {...this.props} /> : null
+    }
+  }
 }
