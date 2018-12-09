@@ -1,12 +1,17 @@
 {
   "version": 2,
   "name": "investing-for-charity",
+  "public": false,
+  "env": {
+    "SHEET_ID": "@sheet-id",
+    "SHEET_RANGE": "@sheet-range",
+    "API_KEY": "@api-key"
+  },
   "builds": [
-      { 
-        "src": "package.json", 
-        "use": "@now/static-build", 
-        "config": {"distDir": "public"},
-        "dotenv": ".env.development"
-      }
+    { 
+      "src": "package.json", 
+      "use": "@now/static-build", 
+      "config": {"distDir": "public"}
+    }
   ]
 }
